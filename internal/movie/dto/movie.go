@@ -138,6 +138,9 @@ type MovieResponse struct {
 }
 
 func NewMovieResponse(movie *entity.Movie) *MovieResponse {
+	if movie == nil {
+		return nil
+	}
 	return &MovieResponse{
 		MovieID:        movie.ID,
 		Title:          movie.Title,
