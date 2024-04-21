@@ -6,6 +6,7 @@ type CreateMovie struct {
 	Title          string `json:"title"`
 	Description    string `json:"description"`
 	AgeRestriction int64  `json:"age_restriction"`
+	Filepath       string `json:"filepath"`
 }
 
 func (m *CreateMovie) ToEntity() *entity.Movie {
@@ -13,6 +14,7 @@ func (m *CreateMovie) ToEntity() *entity.Movie {
 		Title:          m.Title,
 		Description:    m.Description,
 		AgeRestriction: m.AgeRestriction,
+		Filepath:       m.Filepath,
 	}
 }
 
@@ -33,6 +35,7 @@ type UpdateMovieRequest struct {
 	Title          string `json:"title"`
 	Description    string `json:"description"`
 	AgeRestriction int64  `json:"age_restriction"`
+	Filepath       string `json:"filepath"`
 }
 
 func (m *UpdateMovieRequest) ToEntity() *entity.Movie {
@@ -40,6 +43,7 @@ func (m *UpdateMovieRequest) ToEntity() *entity.Movie {
 		Title:          m.Title,
 		Description:    m.Description,
 		AgeRestriction: m.AgeRestriction,
+		Filepath:       m.Filepath,
 	}
 }
 
@@ -48,6 +52,7 @@ type GetSingleMovieResponse struct {
 	Title          string `json:"title"`
 	Description    string `json:"description"`
 	AgeRestriction int64  `json:"age_restriction"`
+	Filepath       string `json:"filepath"`
 }
 
 func NewGetSingleMovieResponse(movie *entity.Movie) *GetSingleMovieResponse {
@@ -56,6 +61,7 @@ func NewGetSingleMovieResponse(movie *entity.Movie) *GetSingleMovieResponse {
 		Title:          movie.Title,
 		Description:    movie.Description,
 		AgeRestriction: movie.AgeRestriction,
+		Filepath:       movie.Filepath,
 	}
 }
 
@@ -64,6 +70,7 @@ type GetPageMovieResponse struct {
 	Title          string `json:"title"`
 	Description    string `json:"description"`
 	AgeRestriction int64  `json:"age_restriction"`
+	Filepath       string `json:"filepath"`
 }
 
 func NewGetPageMovieResponse(movie *entity.Movie) *GetPageMovieResponse {
@@ -72,6 +79,7 @@ func NewGetPageMovieResponse(movie *entity.Movie) *GetPageMovieResponse {
 		Title:          movie.Title,
 		Description:    movie.Description,
 		AgeRestriction: movie.AgeRestriction,
+		Filepath:       movie.Filepath,
 	}
 }
 
@@ -135,6 +143,7 @@ type MovieResponse struct {
 	Title          string `json:"title"`
 	Description    string `json:"description"`
 	AgeRestriction int64  `json:"age_restriction"`
+	Filepath       string `json:"filepath"`
 }
 
 func NewMovieResponse(movie *entity.Movie) *MovieResponse {
@@ -146,6 +155,7 @@ func NewMovieResponse(movie *entity.Movie) *MovieResponse {
 		Title:          movie.Title,
 		Description:    movie.Description,
 		AgeRestriction: movie.AgeRestriction,
+		Filepath:       movie.Filepath,
 	}
 }
 

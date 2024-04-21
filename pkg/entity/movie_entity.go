@@ -11,6 +11,7 @@ type Movie struct {
 	Title          string `gorm:"type:varchar(255);not null;"`
 	Description    string `gorm:"type:varchar(255);not null;"`
 	AgeRestriction int64
+	Filepath       string     `gorm:"type:varchar(255);not null;"`
 	ListMovies     ListMovies `gorm:"many2many:Movie_ListMovie;"`
 	CreatedAt      time.Time
 	UpdatedAt      time.Time
